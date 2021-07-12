@@ -22,7 +22,7 @@ interface Repository {
     }
 }
 
-interface Issue{
+interface Issue {
     id: number;
     title: string;
     html_url: string;
@@ -31,8 +31,9 @@ interface Issue{
     }
 }
 
+// eslint-disable-next-line @typescript-eslint/no-redeclare
 const Repository: React.FC = () => {
-    const [repository, setRepository] = useState<Repository | null >(null);
+    const [repository, setRepository] = useState<Repository | null>(null);
     const [issues, setIssues] = useState<Issue[]>([]);
 
 
@@ -60,7 +61,7 @@ const Repository: React.FC = () => {
                     Voltar
                 </Link>
             </Header>
-            
+
             {repository && (
                 <RepositoryInfo>
                     <header>
